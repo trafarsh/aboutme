@@ -1,0 +1,8 @@
+import Link from "next/link";
+
+const data:Record<string,{title:string;category:string;image:string}>={
+ parselona:{title:'Parselona',category:'Branding / Identity',image:'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=2200&q=90'},
+ 'sora-skincare':{title:'Sora Skincare',category:'Branding / Packaging',image:'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=2200&q=90'},
+ reflections:{title:'Reflections',category:'Editorial / Photography',image:'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=2200&q=90'}
+};
+export default async function ProjectPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=data[slug]??data.parselona;return <main className="project-detail"><Link className="back" href="/work">← BACK TO WORK</Link><p className="section-number" style={{marginTop:'14vh'}}>PROJECT</p><h1>{p.title}</h1><p className="category">{p.category}</p><img className="detail-hero" src={p.image} alt={p.title}/><div className="detail-copy"><h2>Overview</h2><p>This case-study template is ready for the verified project story, process, role, deliverables, and final outcomes. Replace the placeholder copy with Lorena&apos;s real project information and supporting imagery.</p><p>The visual system intentionally gives the work maximum space, using an editorial rhythm instead of a card-heavy interface.</p></div></main>}
