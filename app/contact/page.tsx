@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function ContactPage(){return <main className="contact-page"><Link className="back" href="/">← LORENA MONTES LOMELI</Link><p className="section-number">03.</p><h1>LET&apos;S CREATE<br/>SOMETHING<br/>MEANINGFUL.</h1><div className="details"><a href="mailto:Lorena02ml@gmail.com"><small>EMAIL</small><span>Lorena02ml@gmail.com</span></a><a href="#"><small>INSTAGRAM</small><span>@Loreml_lml</span></a><a href="tel:+15102004709"><small>PHONE</small><span>(510) 200-4709</span></a></div></main>}
